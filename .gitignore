@@ -1,0 +1,16 @@
+.sass-cache
+tmp/**/*
+cache/**/*
+public/stylesheets/compiled
+.project
+.bundle
+*.log
+.yardoc
+.yardopts
+*.tmproj
+.autotest
+.DS_Store
+.project
+*.rbc
+.idea
+*~
