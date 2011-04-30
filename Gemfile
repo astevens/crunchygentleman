@@ -18,4 +18,4 @@ gem 'rack-test', :group => "test", :require => "rack/test"
 
 
 # Padrino
-gem 'padrino', "0.9.25"
+gem 'padrino', "0.9.26"
