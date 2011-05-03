@@ -1,5 +1,9 @@
 source :rubygems
 
+# Padrino
+gem 'padrino', "0.9.26"
+gem 'padrino-warden', :git => 'git://github.com/astevens/padrino-warden.git'
+
 # Project requirements
 gem 'rake'
 gem 'rack-flash'
@@ -17,5 +21,8 @@ gem 'rspec', :group => "test"
 gem 'rack-test', :group => "test", :require => "rack/test"
 
 
-# Padrino
-gem 'padrino', "0.9.26"
+
+group :development do
+  gem 'bond'
+  gem 'awesome_print'
+end
