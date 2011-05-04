@@ -16,6 +16,7 @@ gem 'SystemTimer', :require => "system_timer"
 gem 'mongoid', "2.0.0"
 gem 'bson_ext', :require => "mongo"
 
+gem 'image_science', :git => 'git://github.com/asynchrony/image_science.git'
 gem 'fog'
 gem 'carrierwave'
 
