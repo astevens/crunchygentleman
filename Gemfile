@@ -16,6 +16,9 @@ gem 'SystemTimer', :require => "system_timer"
 gem 'mongoid', "2.0.0"
 gem 'bson_ext', :require => "mongo"
 
+gem 'fog'
+gem 'carrierwave'
+
 # Test requirements
 gem 'rspec', :group => "test"
 gem 'rack-test', :group => "test", :require => "rack/test"
