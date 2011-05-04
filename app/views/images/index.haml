@@ -1,0 +1,4 @@
+%ul
+  - @images.each do |image|
+    %li= image_tag(image.file.thumb.url)
+    

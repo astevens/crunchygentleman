@@ -47,7 +47,7 @@ class MediaImageUploader < CarrierWave::Uploader::Base
   ##
   # Override the filename of the uploaded files
   #
-  # def filename
-  #   "something.jpg" if original_filename
-  # end
+  def filename
+    model.id.to_s + File.extname(original_filename)
+  end
 end
