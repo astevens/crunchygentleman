@@ -4,7 +4,7 @@ module Media
   class Image
     include Mongoid::Document
     include Mongoid::Timestamps # adds created_at and updated_at fields
-    # mount_uploader :file, MediaImageUploader
+    mount_uploader :file, MediaImageUploader
 
     # field <name>, :type => <type>, :default => <value>
   

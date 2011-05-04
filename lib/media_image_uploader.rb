@@ -1,30 +1,8 @@
 class MediaImageUploader < CarrierWave::Uploader::Base
-
-  ##
-  # Image manipulator library:
-  #
-  # include CarrierWave::RMagick
   include CarrierWave::ImageScience
-  # include CarrierWave::MiniMagick
-
-  ##
-  # Storage type
-  #
-  # storage :file
-  # configure do |config|
-  #   config.fog_credentials = {
-  #     :provider              => 'XXX',
-  #     :aws_access_key_id     => 'YOUR_ACCESS_KEY',
-  #     :aws_secret_access_key => 'YOUR_SECRET_KEY'
-  #   }
-  #   config.fog_directory = 'YOUR_BUCKET'
-  # end
   storage :fog
 
-
-
-  ## Manually set root
-  def root; File.join(Padrino.root,"public/"); end
+  # def root; File.join(Padrino.root,"public/"); end
 
   ##
   # Directory where uploaded files will be stored (default is /public/uploads)

@@ -1,0 +1,15 @@
+production:
+  access_key: ABCDE
+  secret_key: 12345
+  host: "http://assets.example.com"
+  bucket: assets.example.com
+development:
+  access_key: ABCDE
+  secret_key: 12345
+  host: "http://assets.example.com"
+  bucket: assets.example.com
+test:
+  access_key: ABCDE
+  secret_key: 12345
+  host: "http://assets.example.com"
+  bucket: assets.example.com
