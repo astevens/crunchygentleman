@@ -1,0 +1,4 @@
+=h gallery.description
+= link_to("View", url(:galleries, :show, :id => gallery))
+- gallery.medias.each do |media|
+  = partial '/galleries/' + media.class.to_s.underscore + '/thumb', :locals => {:media => media }

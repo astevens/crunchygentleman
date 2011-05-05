@@ -1,0 +1,3 @@
+%ul
+  - @galleries.each do |gallery|
+    %li= partial 'galleries/gallery_row', :locals => {:gallery => gallery}
