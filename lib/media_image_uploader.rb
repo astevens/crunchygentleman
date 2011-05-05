@@ -1,6 +1,6 @@
 class MediaImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::ImageScience
-  storage :fog
+  # storage :fog
 
   # def root; File.join(Padrino.root,"public/"); end
 
@@ -48,6 +48,6 @@ class MediaImageUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files
   #
   def filename
-    model.id.to_s + File.extname(original_filename)
+    model.id.to_s + File.extname(original_filename) unless original_filename.blank?
   end
 end

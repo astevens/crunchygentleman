@@ -39,7 +39,6 @@ class CrunchyGentleman < Padrino::Application
   
   CarrierWave.configure do |config|
     s3_config = YAML.load(File.open(Padrino.root('config/s3.yml')))[Padrino.env.to_s]
-    config.permissions = 0666
     config.storage = :fog
     config.fog_credentials = {
       :provider              => 'AWS',

@@ -1,4 +1,5 @@
 %ul
   - @images.each do |image|
-    %li= image_tag(image.file.thumb.url)
-    
+    %li= link_to(image_tag(image.file.thumb.url), url(:images, :show, :id => image))
+
+%p= link_to("Add new image", url(:images, :new))
