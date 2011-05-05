@@ -4,5 +4,6 @@ class Media
   
   field :description, :type => String
   
-  belongs_to :gallery
+  belongs_to :gallery, :required => true
+  validates_presence_of :gallery_id, :message => "can't be blank"
 end
