@@ -1,0 +1,105 @@
+!!! 5
+%html
+  %head
+    %meta{:content => "text/html;charset=iso-8859-2", "http-equiv" => "content-type"}/
+    %link{:href => "/stylesheets/style.css", :rel => "stylesheet", :type => "text/css"}/
+    %title Crunchy Gentleman
+  %body
+    .content
+      .header_right
+        .top_info
+          .top_info_right
+            %p
+              %b You are not Logged in!
+              %a{:href => "#"} Log in
+              or
+              %a{:href => "#"} register
+              to vote on pics and vids!
+        .bar
+          %ul
+            %li.slogan Tags:
+            %li
+              %a{:accesskey => "r", :href => "#"} Redhead
+            %li
+              %a{:accesskey => "a", :href => "#"} Anal
+            %li.active Upskirts
+            %li
+              %a{:accesskey => "p", :href => "#"} Pictures
+            %li
+              %a{:accesskey => "g", :href => "#"} Gigs
+      .logo
+        %h1
+          %a{:href => "/", :title => "The best porn on the net!"}
+            Crunchy
+            %span.red Gentleman
+      .search_field
+        %form{:action => "?", :method => "post"}
+          %p
+            %span.grey
+              Search:
+            %input.search{:name => "search", :type => "text"}/
+            %input.button{:type => "submit", :value => "Play!"}/
+      .newsletter
+        %p Have a look around!
+      .subheader
+        %p
+          %a{:href => "#"} Register now.
+          It's your duty as a citizen to rate all the porns. Only the best can make front page.
+          It's free, and we won't spam you.
+      .left
+        = yield
+      
+      .right
+        .rt
+        .right_articles
+          %p
+            %img.image{:alt => "Image", :src => "images/image.gif", :title => "Image"}/
+            %b Lorem ipsum dolor sit amet
+            = succeed "consectetuer" do
+              %br/
+            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+            = succeed "." do
+              %a{:href => "#"} erat volutpat
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+            = succeed "." do
+              %a{:href => "#"} nisl ut aliquip ex
+        .rt
+        .right_articles
+          %p
+            %img.image{:alt => "Image", :src => "images/image.gif", :title => "Image"}/
+            %b Lorem ipsum dolor sit amet
+            = succeed "consectetuer" do
+              %br/
+            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+            = succeed "." do
+              %a{:href => "#"} erat volutpat
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+            = succeed "." do
+              %a{:href => "#"} nisl ut aliquip ex
+        .rt
+        .right_articles
+          %p
+            %img.image{:alt => "Image", :src => "images/image.gif", :title => "Image"}/
+            %b Lorem ipsum dolor sit amet
+            = succeed "consectetuer" do
+              %br/
+            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+            = succeed "." do
+              %a{:href => "#"} erat volutpat
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+            = succeed "." do
+              %a{:href => "#"} nisl ut aliquip ex
+      .footer
+        %p
+          %a{:href => "#"} RSS Feed
+          |
+          %a{:href => "#"} Contact
+          |
+          %a{:href => "#"} Accessibility
+          |
+          %a{:href => "#"} Products
+          |
+          %a{:href => "#"} Disclaimer
+          |
+          %br/
+          \&copy; Copyright 2011 Orange Six
