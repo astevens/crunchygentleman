@@ -1,2 +1,7 @@
 = image_tag(@image.file.url)
-%p yep
+%br/
+= image_tag(@image.file.medium.url)
+%br/
+= image_tag(@image.file.small.url)
+%br/
+= image_tag(@image.file.thumb.url)

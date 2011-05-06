@@ -28,8 +28,8 @@ class MediaImageUploader < CarrierWave::Uploader::Base
   ##
   # Process files as they are uploaded.
   #
-  # process :resize_to_fit => [740, 580]
-
+  process :resize_to_fit => [960, 960]
+  
   ##
   # Create different versions of your uploaded files
   #
@@ -42,10 +42,6 @@ class MediaImageUploader < CarrierWave::Uploader::Base
   
   version :medium do
     process :resize_to_fit => [400, 400]
-  end
-  
-  version :large do
-    process :resize_to_fit => [900, 900]
   end
   
   ##

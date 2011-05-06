@@ -323,3 +323,16 @@ input.login {
 	color: #C3593C;
 	background: inherit;
 }
+
+.gallery-row span{
+	font-size: large;
+}
+
+.gallery-row{
+	margin-bottom: 10px;
+	border: 1px solid transparent;
+}
+
+.gallery-row:hover{
+	border:1px dashed #333333;
+}

@@ -20,6 +20,8 @@ gem 'image_science', :git => 'git://github.com/asynchrony/image_science.git'
 gem 'fog'
 gem 'carrierwave'
 
+gem 'nokogiri'
+
 # Test requirements
 gem 'rspec', :group => "test"
 gem 'rack-test', :group => "test", :require => "rack/test"

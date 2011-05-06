@@ -149,6 +149,7 @@ DEPENDENCIES
   haml
   image_science!
   mongoid (= 2.0.0)
+  nokogiri
   padrino (= 0.9.26)
   padrino-warden!
   rack-flash
