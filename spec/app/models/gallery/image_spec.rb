@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe "Gallery::Image Model" do
-  let(:gallery/image) { Gallery::Image.new }
+describe "Post::Image Model" do
+  let(:post/image) { Post::Image.new }
   it 'can be created' do
-    gallery/image.should_not be_nil
+    post/image.should_not be_nil
   end
 end

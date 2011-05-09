@@ -324,15 +324,15 @@ input.login {
 	background: inherit;
 }
 
-.gallery-row span{
+.post-row span{
 	font-size: large;
 }
 
-.gallery-row{
+.post-row{
 	margin-bottom: 10px;
 	border: 1px solid transparent;
 }
 
-.gallery-row:hover{
+.post-row:hover{
 	border:1px dashed #333333;
 }

@@ -1,0 +1,6 @@
+= form_tag(url(:imports, :imagefap)) do
+  %ul
+    %li
+      = label_tag("imagefap URL")
+      = text_field_tag("imagefap_url")
+  = submit_tag("Import")

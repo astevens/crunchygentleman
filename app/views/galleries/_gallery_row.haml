@@ -1,5 +1,0 @@
-.gallery-row
-  %span= link_to(gallery.description, url(:galleries, :show, :id => gallery))
-  %br/
-  - gallery.medias.limit(9).each do |media|
-    = partial '/galleries/' + media.class.to_s.underscore + '/thumb', :locals => {:media => media }

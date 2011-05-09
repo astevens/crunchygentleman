@@ -1,4 +1,4 @@
-class Gallery::Video < Gallery
+class Post::Video < Post
   def media_type
     'video'
   end

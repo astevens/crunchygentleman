@@ -1,7 +1,7 @@
 source :rubygems
 
 # Padrino
-gem 'padrino', "0.9.26"
+gem 'padrino', "0.9.27"
 gem 'padrino-warden', :git => 'git://github.com/astevens/padrino-warden.git'
 
 # Project requirements

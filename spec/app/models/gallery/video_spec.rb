@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe "Gallery::Video Model" do
-  let(:gallery/video) { Gallery::Video.new }
+describe "Post::Video Model" do
+  let(:post/video) { Post::Video.new }
   it 'can be created' do
-    gallery/video.should_not be_nil
+    post/video.should_not be_nil
   end
 end

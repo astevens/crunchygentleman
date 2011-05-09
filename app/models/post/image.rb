@@ -1,4 +1,4 @@
-class Gallery::Image < Gallery
+class Post::Image < Post
   def media_type
     'image'
   end

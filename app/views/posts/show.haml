@@ -1,0 +1,5 @@
+%p= link_to("Back", url(:posts, :index))
+%p= h @post.description
+%ul
+  - @post.medias.each do |media|
+    %li= partial '/posts/' + media.class.to_s.underscore + '/medium', :locals => {:media => media}
