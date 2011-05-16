@@ -1,8 +1,6 @@
 CrunchyGentleman.controllers :posts do
   get :index, :map => "/" do
     @posts = Post.order_by([:created_at, :asc]).paginate(:per_page => 20, :page => params[:page])
-    flash[:error] = "Example error"
-    flash[:information] = "Poop a doop!"
     render 'posts/index'
   end
   

@@ -10,8 +10,8 @@
 %head
   %title Crunchy Gentleman
   %meta{:charset => "UTF-8"}/
-  %meta{:content => "", :name => "description"}/
-  %meta{:content => "", :name => "author"}/
+  %meta{:content => "The more social way to be lookin at images and moovies", :name => "description"}/
+  %meta{:content => "Andrew Stevens", :name => "author"}/
   %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
   %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
   %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}/
@@ -47,6 +47,8 @@
     = partial 'shared/widgets'
     = partial 'shared/breadcrumbs'
     = partial 'shared/notifications'
+    .clearfix
+    = yield
     
   / /Main Content
   / JS Libs at the end for faster loading

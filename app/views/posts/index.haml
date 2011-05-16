@@ -1,3 +1,24 @@
-%ul
-  - @posts.each do |post|
-    %li= partial 'posts/post_row', :locals => {:post => post}
+/ Full Content Block
+%article.full-block
+  / Article Container for safe floating
+  .article-container
+    / Article Header
+    %header
+      %h2 Popular Galleries
+    / /Article Header
+    / Article Content
+    %section
+      %ul
+        - @posts.each do |post|
+          %li= partial 'posts/post_row', :locals => {:post => post}
+
+    / /Article Content
+    / Article Footer
+    %footer
+    %p
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
+      %a{:href => "#sample", :rel => "modal"} open modal!
+      Maecenas id augue ac metus tempus aliquam. Sed pharetra placerat suscipit sagittis.
+    / /Article Footer
+  / /Article Container
+  / /Full Content Block
