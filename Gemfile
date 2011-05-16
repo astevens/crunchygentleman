@@ -3,6 +3,7 @@ source :rubygems
 # Padrino
 gem 'padrino', "0.9.27"
 gem 'padrino-warden', :git => 'git://github.com/astevens/padrino-warden.git'
+gem 'sinatra-simple-navigation', :require => 'sinatra/simple-navigation'
 
 # Project requirements
 gem 'rake'

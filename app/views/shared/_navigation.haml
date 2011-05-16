@@ -1,0 +1,53 @@
+/ Main Navigation
+%nav#main-nav
+  %ul
+    %li
+      %a.dashboard.no-submenu{:href => "/", :title => ""} Dashboard
+    / Use class .no-submenu to open link instead of a sub menu
+    / Use class .current to open submenu on page load
+    %li.current
+      %a.projects{:href => "", :title => ""} Projects
+      %span{:title => "You have 3 new tasks"} 3
+      %ul
+        %li
+          %a{:href => "", :title => ""} Add Project
+        %li.current
+          %a{:href => "", :title => ""} Edit Project
+        %li
+          %a{:href => "", :title => ""} Project Management
+        %li
+          %a{:href => "", :title => ""} Project Gallery
+        %li
+          %a{:href => "", :title => ""} Settings
+    %li
+      %a.products{:href => "", :title => ""} Products
+      %ul
+        %li
+          %a{:href => "", :title => ""} Add Product
+        %li
+          %a{:href => "", :title => ""} Edit Product
+        %li
+          %a{:href => "", :title => ""} Product Management
+        %li
+          %a{:href => "", :title => ""} Some very long link with a lot of words
+    %li
+      %a.events{:href => "", :title => ""} Events
+      %ul
+        %li
+          %a{:href => "", :title => ""} My Events
+        %li
+          %a{:href => "", :title => ""} Add Event
+        %li
+          %a{:href => "", :title => ""} Edit Event
+        %li
+          %a{:href => "", :title => ""} Event Management
+        %li
+          %a{:href => "", :title => ""} Settings
+    %li
+      %a.articles{:href => "", :title => ""} Articles
+    %li
+      %a.gallery{:href => "", :title => ""} Image Gallery
+      %span{:title => "You have 47 new tasks"} 47
+    %li
+      %a.settings{:href => "", :title => ""} Settings
+/ /Main Navigation

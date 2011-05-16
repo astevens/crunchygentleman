@@ -1,0 +1,7 @@
+- [:error, :success, :information, :attention, :note].each do |type|
+  - unless flash[type].blank?
+    / Notification
+    .notification{:class => type}
+      %a.close-notification{:href => "#", :rel => "tooltip", :title => "Close"} x
+      %p= flash[type]
+    / /Notification

@@ -117,9 +117,13 @@ GEM
     rspec-mocks (2.6.0)
     ruby-hmac (0.4.0)
     sass (3.1.1)
+    simple-navigation (3.2.0)
+      activesupport (>= 2.3.2)
     sinatra (1.2.6)
       rack (~> 1.1)
       tilt (< 2.0, >= 1.2.2)
+    sinatra-simple-navigation (3.2.1)
+      simple-navigation (>= 3.1.0)
     thin (1.2.11)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -156,4 +160,5 @@ DEPENDENCIES
   rack-test
   rake
   rspec
+  sinatra-simple-navigation
   thin

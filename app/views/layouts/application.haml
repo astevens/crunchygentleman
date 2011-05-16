@@ -1,105 +1,63 @@
 !!! 5
-%html
-  %head
-    %meta{:content => "text/html;charset=iso-8859-2", "http-equiv" => "content-type"}/
-    %link{:href => "/stylesheets/style.css", :rel => "stylesheet", :type => "text/css"}/
-    %title Crunchy Gentleman
-  %body
-    .content
-      .header_right
-        .top_info
-          .top_info_right
-            %p
-              %b You are not Logged in!
-              %a{:href => "#"} Log in
-              or
-              %a{:href => "#"} register
-              to vote on pics and vids!
-        .bar
-          %ul
-            %li.slogan Tags:
-            %li
-              %a{:accesskey => "r", :href => "#"} Redhead
-            %li
-              %a{:accesskey => "a", :href => "#"} Anal
-            %li.active Upskirts
-            %li
-              %a{:accesskey => "p", :href => "#"} Pictures
-            %li
-              %a{:accesskey => "g", :href => "#"} Gigs
-      .logo
-        %h1
-          %a{:href => "/", :title => "The best porn on the net!"}
-            Crunchy
-            %span.red Gentleman
-      .search_field
-        %form{:action => "?", :method => "post"}
-          %p
-            %span.grey
-              Search:
-            %input.search{:name => "search", :type => "text"}/
-            %input.button{:type => "submit", :value => "Play!"}/
-      .newsletter
-        %p Have a look around!
-      .subheader
-        %p
-          %a{:href => "#"} Register now.
-          It's your duty as a citizen to rate all the porns. Only the best can make front page.
-          It's free, and we won't spam you.
-      .left
-        = yield
-      
-      .right
-        .rt
-        .right_articles
-          %p
-            %img.image{:alt => "Image", :src => "images/image.gif", :title => "Image"}/
-            %b Lorem ipsum dolor sit amet
-            = succeed "consectetuer" do
-              %br/
-            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-            = succeed "." do
-              %a{:href => "#"} erat volutpat
-            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-            = succeed "." do
-              %a{:href => "#"} nisl ut aliquip ex
-        .rt
-        .right_articles
-          %p
-            %img.image{:alt => "Image", :src => "images/image.gif", :title => "Image"}/
-            %b Lorem ipsum dolor sit amet
-            = succeed "consectetuer" do
-              %br/
-            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-            = succeed "." do
-              %a{:href => "#"} erat volutpat
-            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-            = succeed "." do
-              %a{:href => "#"} nisl ut aliquip ex
-        .rt
-        .right_articles
-          %p
-            %img.image{:alt => "Image", :src => "images/image.gif", :title => "Image"}/
-            %b Lorem ipsum dolor sit amet
-            = succeed "consectetuer" do
-              %br/
-            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-            = succeed "." do
-              %a{:href => "#"} erat volutpat
-            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-            = succeed "." do
-              %a{:href => "#"} nisl ut aliquip ex
-      .footer
-        %p
-          %a{:href => "#"} RSS Feed
-          |
-          %a{:href => "#"} Contact
-          |
-          %a{:href => "#"} Accessibility
-          |
-          %a{:href => "#"} Products
-          |
-          %a{:href => "#"} Disclaimer
-          |
-          %br/
-          \&copy; Copyright 2011 Orange Six
+/[if IE 7 ]
+  %html{:lang =>"en", :class => "no-js ie7"}
+/[if IE 8 ]
+  %html{:lang => "en", :class => "no-js ie8"}
+/[if IE 9 ]
+  %html{:lang => "en", :class => "no-js ie9"}
+:plain
+  <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+%head
+  %title Crunchy Gentleman
+  %meta{:charset => "UTF-8"}/
+  %meta{:content => "", :name => "description"}/
+  %meta{:content => "", :name => "author"}/
+  %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+  %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+  %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+  / CSS Styles
+  = stylesheet_link_tag 'style', 'colors', 'jquery.tipsy', 'jquery.wysiwyg', 'jquery.datatables', |
+      'jquery.facebox', 'jquery.datepicker', 'jquery.fileinput', 'jquery.fullcalendar'
+  / Color settings
+  %script{:src => "/javascripts/libs/modernizr-1.7.min.js"}
+%body
+  / Aside Block
+  %section{:role => "navigation"}
+    / Header with logo and headline
+    %header
+      %a{:href => "/", :title => "Back to Homepage"}
+      %h1 Lorem ipsum dolor sit amet!
+    / User Info
+    %section#user-info
+      %img{:alt => "Sample User Avatar", :src => "/images/avatar-small.png"}/
+      %div
+        %a{:href => "#", :title => "Account Settings and Profile Page"} Joe Tester
+        %em Administrator
+        %ul
+          %li
+            %a.button-link{:href => "#", :rel => "tooltip", :title => "This is my title!"} view website
+          %li
+            %a.button-link{:href => "#", :rel => "tooltip", :title => "And this is Sparta!"} logout
+    / /User Info
+    = partial 'shared/navigation'
+    = partial 'shared/sidebar'
+  / /Aside Block
+  / Main Content
+  %section{:role => "main"}
+    = partial 'shared/widgets'
+    = partial 'shared/breadcrumbs'
+    = partial 'shared/notifications'
+    
+  / /Main Content
+  / JS Libs at the end for faster loading
+  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"
+  :javascript
+    !window.jQuery && document.write(unescape('%3Cscript src="/javascripts/jquery/jquery-1.5.1.min.js"%3E%3C/script%3E'))    
+  = javascript_include_tag "libs/selectivizr.js", "jquery/jquery.facebox.js", "jquery/jquery.tipsy.js", |
+    "jquery/jquery.wysiwyg.js", "jquery/jquery.datatables.js", "jquery/jquery.datepicker.js", |
+    "jquery/jquery.fileinput.js", "jquery/jquery.fullcalendar.min.js", "script.js"
+  :javascript
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));

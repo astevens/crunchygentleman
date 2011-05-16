@@ -1,0 +1,44 @@
+/ Widget Container
+%section#widgets-container
+  / Widget Box
+  #new-visitors.widget.increase
+    %a.close-widget{:href => "#", :rel => "tooltip", :title => "Hide Widget"} x
+    %span increase
+    %p
+      %strong
+        +35,18
+        %sup %
+      +2489 new visitors
+  / /Widget Box
+  / Widget Box
+  #new-orders.widget.decrease
+    %a.close-widget{:href => "#", :rel => "tooltip", :title => "Hide Widget"} x
+    %span decrease
+    %p
+      %strong
+        \-12,50
+        %sup %
+      \-311 new orders
+  / Widget Box
+  / /Widget Box
+  #new-tasks.widget.increase
+    %a.close-widget{:href => "#", :rel => "tooltip", :title => "Hide Widget"} x
+    %span 7
+    %p
+      %strong Tasks
+      +3 New Tasks
+  / Widget Box
+  / /Widget Box
+  #text-widget.widget.text-only
+    %a.close-widget{:href => "#", :rel => "tooltip", :title => "Hide Widget"} x
+    %p
+      %strong Text Only App
+      +29 Lorem Ipsum
+  / /Widget Box
+  / Add New Widget Box
+  .widget.add-new-widget
+    %a{:href => "#"}
+      %span Add
+      %strong Add Widget
+  / /Add New Widget Box
+/ /Widget Container
