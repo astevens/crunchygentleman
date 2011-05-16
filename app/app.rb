@@ -2,7 +2,6 @@ class CrunchyGentleman < Padrino::Application
   register Padrino::Mailer
   register Padrino::Helpers
   register CompassInitializer
-  register Sinatra::SimpleNavigation
 
 
   set :session_secret, "15820d6004fcfaeea754524f398e85ef4c2bb46db181c454bf9d96de566dd9ea"
