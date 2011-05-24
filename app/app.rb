@@ -3,10 +3,6 @@ class CrunchyGentleman < Padrino::Application
   register Padrino::Helpers
   register CompassInitializer
 
-
-  set :session_secret, "15820d6004fcfaeea754524f398e85ef4c2bb46db181c454bf9d96de566dd9ea"
-  set :sessions, true
-
   ##
   # Caching support
   #
@@ -38,18 +34,23 @@ class CrunchyGentleman < Padrino::Application
   #
 
   CarrierWave.configure do |config|
-    s3_config = YAML.load(File.open(Padrino.root('config/s3.yml')))[Padrino.env.to_s]
-    config.storage = :fog
-    config.fog_credentials = {
-        :provider => 'AWS',
-        :aws_access_key_id => s3_config["access_key"],
-        :aws_secret_access_key => s3_config["secret_key"],
-        :region => 'us-east-1'
-    }
-    config.fog_directory = s3_config["bucket"]
-    config.fog_host = s3_config["host"]
-    config.fog_public = true
-    config.fog_attributes = {'Cache-Control'=>'max-age=315576000', 'x-amz-storage-class' => 'REDUCED_REDUNDANCY'}
+    if Padrino.env == :production
+      s3_config = YAML.load(File.open(Padrino.root('config/s3.yml')))[Padrino.env.to_s]
+      config.storage = :fog
+      config.fog_credentials = {
+          :provider => 'AWS',
+          :aws_access_key_id => s3_config["access_key"],
+          :aws_secret_access_key => s3_config["secret_key"],
+          :region => 'us-east-1'
+      }
+      config.fog_directory = s3_config["bucket"]
+      config.fog_host = s3_config["host"]
+      config.fog_public = true
+      config.fog_attributes = {'Cache-Control'=>'max-age=315576000', 'x-amz-storage-class' => 'REDUCED_REDUNDANCY'}
+    else
+      config.storage = :file
+      config.store_dir = Padrino.root + "/tmp/uploads"
+    end
   end
 
   ##

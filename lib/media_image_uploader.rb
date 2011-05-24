@@ -2,13 +2,15 @@ class MediaImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::ImageScience
   # storage :fog
 
-  # def root; File.join(Padrino.root,"public/"); end
+  def root
+    File.join(Padrino.root, "public/")
+  end
 
   ##
   # Directory where uploaded files will be stored (default is /public/uploads)
   #
   def store_dir
-    'media/images'
+    'media/images/' + model.post.id.to_s
   end
 
   ##
@@ -41,7 +43,7 @@ class MediaImageUploader < CarrierWave::Uploader::Base
   end
   
   version :medium do
-    process :resize_to_fit => [400, 400]
+    process :resize_to_fill => [300, 300]
   end
   
   ##

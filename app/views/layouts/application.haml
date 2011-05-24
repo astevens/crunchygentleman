@@ -40,15 +40,16 @@
             %a.button-link{:href => "#", :rel => "tooltip", :title => "And this is Sparta!"} logout
     / /User Info
     = partial 'shared/navigation'
-    = partial 'shared/sidebar'
+    / = partial 'shared/sidebar'
   / /Aside Block
   / Main Content
   %section{:role => "main"}
-    = partial 'shared/widgets'
+    / = partial 'shared/widgets'
     = partial 'shared/breadcrumbs'
     = partial 'shared/notifications'
     .clearfix
     = yield
+    .clearfix
     
   / /Main Content
   / JS Libs at the end for faster loading

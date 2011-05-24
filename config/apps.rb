@@ -1,3 +1,7 @@
+Padrino.configure_apps do
+  enable :sessions
+  set :session_secret, "2a8b28bdf2e717fd3756821cd6f7afcf942ca60457d0bdc3fa4a4d26fdb51ae2"
+end
 ##
 # This file mounts each app in the Padrino project to a specified sub-uri.
 # You can mount additional applications using any of these commands below:
