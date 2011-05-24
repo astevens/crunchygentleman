@@ -1,5 +1,0 @@
-.post-row
-  %span= link_to(post.description, url(:posts, :show, :id => post))
-  %br/
-  - post.medias.limit(9).each do |media|
-    = partial '/posts/' + media.class.to_s.underscore + '/thumb', :locals => {:media => media }
