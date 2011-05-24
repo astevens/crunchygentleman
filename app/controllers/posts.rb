@@ -9,4 +9,11 @@ CrunchyGentleman.controllers :posts do
     render 'posts/show'
   end
   
+  delete :destroy, :with => :id do
+    @post = Post.find(params[:id])
+    name = @post.description
+    @post.destroy
+    redirect url(:posts, :index), :flash => {:notice => "#{name} deleted."}
+  end
+  
 end

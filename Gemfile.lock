@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/astevens/acts_as_list_mongoid.git
+  revision: 4e13497de732b7269bf94d2ba1bf1edd0729014b
+  specs:
+    acts_as_list_mongoid (0.2.2)
+      mongoid (>= 2.0.0.beta.14)
+      mongoid_embedded_helper (>= 0.2.5)
+
+GIT
   remote: git://github.com/astevens/padrino-warden.git
   revision: 97dd2aff56e22b462c69a7698e6e90343c9a7117
   specs:
@@ -69,6 +77,16 @@ GEM
       mongo (~> 1.2)
       tzinfo (~> 0.3.22)
       will_paginate (~> 3.0.pre)
+    mongoid_adjust (0.1.1)
+      bson (>= 1.0.3)
+      mongoid (>= 2.0.0.beta.14)
+    mongoid_embedded_helper (0.3.0)
+      bson_ext (>= 1.0.1)
+      bson_ext (>= 1.0.8)
+      mongoid (>= 2.0.0.beta.14)
+      mongoid (>= 2.0.0.beta.18)
+      mongoid_adjust (>= 0.1.1)
+      mongoid_adjust (>= 0.1.1)
     net-ssh (2.1.4)
     nokogiri (1.4.4)
     padrino (0.9.29)
@@ -139,6 +157,7 @@ PLATFORMS
 
 DEPENDENCIES
   SystemTimer
+  acts_as_list_mongoid!
   awesome_print
   bond
   bson_ext

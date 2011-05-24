@@ -7,4 +7,4 @@
   )
 %ul.post_list
   - @post.medias.each do |media|
-    %li.medium= partial 'posts/' + media.class.to_s.underscore + '/medium', :locals => {:media => media}
+    %li.medium= partial media.class.to_s.underscore + '/medium', :locals => {:media => media}
