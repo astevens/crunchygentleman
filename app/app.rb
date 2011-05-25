@@ -1,7 +1,12 @@
 class CrunchyGentleman < Padrino::Application
   register Padrino::Mailer
   register Padrino::Helpers
-  register CompassInitializer
+  register Padrino::Admin::AccessControl
+  # register CompassInitializer
+  
+  enable :authentication
+  enable :store_location
+  set    :login_page, "/login"
 
   ##
   # Caching support
